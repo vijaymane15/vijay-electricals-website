@@ -4,6 +4,8 @@ import Navbar from '@/components/layout/Navbar';
 import { IndianRupee, Check } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 const APFCPanel = () => {
   return (
@@ -173,14 +175,17 @@ const APFCPanel = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Contact our team today for a custom APFC solution tailored to your specific needs and requirements.
           </p>
-          <Button 
-            variant="default"
-            className="bg-brand-red hover:bg-red-600 text-white"
-            onClick={() => window.location.href = '/contact'}
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+<Button
+  asChild
+  variant="default"
+  className="bg-brand-red hover:bg-red-600 text-white"
+>
+  <Link to="/contact">
+    Contact Us
+    <ArrowRight className="ml-2 h-4 w-4" />
+  </Link>
+</Button>
+
         </div>
       </div>
     </div>
