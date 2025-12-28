@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
 
 interface ServiceCardProps {
   title: string;
@@ -65,17 +67,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, fea
           {description}
         </p>
         
-        <Button 
-          asChild
-          variant={isContact ? "secondary" : featured ? "secondary" : "outline"} 
-          size="sm" 
-          className="group/btn w-full justify-between"
-        >
-          <a href="/contact">
-            {isContact ? "Contact Us" : "Get a Quote"}
-            <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-          </a>
-        </Button>
+<Button
+  asChild
+  variant={isContact ? "secondary" : featured ? "secondary" : "outline"}
+  size="sm"
+  className="group/btn w-full justify-between"
+>
+  <Link to="/contact">
+    {isContact ? "Contact Us" : "Get a Quote"}
+    <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+  </Link>
+</Button>
+
       </CardContent>
     </Card>
   );
@@ -212,12 +215,13 @@ const Services = () => {
           <p className="text-xl mb-8 opacity-90">
             Contact us today for a consultation and free quote!
           </p>
-          <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6">
-            <a href="/contact">
-              Get in Touch
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+<Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6">
+  <Link to="/contact">
+    Get in Touch
+    <ArrowRight className="ml-2 h-5 w-5" />
+  </Link>
+</Button>
+
         </div>
       </div>
     </div>
