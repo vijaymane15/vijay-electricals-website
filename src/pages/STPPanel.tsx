@@ -4,6 +4,8 @@ import Navbar from '@/components/layout/Navbar';
 import { Droplets, Activity, Leaf } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 const STPPanel = () => {
   return (
@@ -161,14 +163,17 @@ const STPPanel = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             We design STP panels for capacities ranging from 10 KLD to 5 MLD. Get a customized solution for your requirements.
           </p>
-          <Button 
-            variant="default"
-            className="bg-brand-red hover:bg-red-600 text-white"
-            onClick={() => window.location.href = '/contact'}
-          >
-            Get a Quote
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+<Button
+  asChild
+  variant="default"
+  className="bg-brand-red hover:bg-red-600 text-white"
+>
+  <Link to="/contact">
+    Contact Us
+    <ArrowRight className="ml-2 h-4 w-4" />
+  </Link>
+</Button>
+
         </div>
       </div>
     </div>
