@@ -12,7 +12,7 @@ const Products = () => {
       title: "APFC Panel",
       description: "Automatic Power Factor Control (APFC) Panels help in improving the power factor, thus saving energy and reducing electricity costs. Our APFC panels are designed with the latest technology to ensure optimal performance and reliability.",
       gradientClass: "bg-gradient-to-br from-orange-50 to-red-100",
-      imageUrl: "public/lovable-uploads/apfc.png"
+      imageUrl: "/lovable-uploads/apfc.png"
     },
     {
       id: 2,
