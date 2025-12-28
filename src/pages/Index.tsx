@@ -85,7 +85,7 @@ const Index = () => {
             
             <div className="flex flex-wrap gap-4">
   <a
-    href="public/Vijay Electricals Profile.pdf"
+    href="/VIJAY ELECTRICALS PROFILE.pdf"
     download = "Vijay Electricals Profile.pdf"
     target="_blank"
     rel="noopener noreferrer"
