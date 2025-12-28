@@ -4,6 +4,8 @@ import Navbar from '@/components/layout/Navbar';
 import { Factory, FlaskConical, BarChart3 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 const ETPPanel = () => {
   return (
@@ -163,14 +165,17 @@ const ETPPanel = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Our team specializes in ETP automation for all types of industrial effluents. Contact us for a site assessment and customized proposal.
           </p>
-          <Button 
-            variant="default"
-            className="bg-brand-red hover:bg-red-600 text-white"
-            onClick={() => window.location.href = '/contact'}
-          >
-            Get a Quote
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+<Button
+  asChild
+  variant="default"
+  className="bg-brand-red hover:bg-red-600 text-white"
+>
+  <Link to="/contact">
+    Contact Us
+    <ArrowRight className="ml-2 h-4 w-4" />
+  </Link>
+</Button>
+
         </div>
       </div>
     </div>
